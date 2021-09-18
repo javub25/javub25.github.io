@@ -1,0 +1,190 @@
+/*En el selector universal vamos hacer que todos los divs
+respeten el width y height que le escribamos.
+
+Yaaaaaa
+*/
+
+*{
+  box-sizing: border-box;
+}
+
+body
+{
+  /*Eliminaremos el margen de 8px que el navegador por defecto*/
+  margin:0;
+  /*Canviamos fuente*/
+  font-family: 'Urbanist', sans-serif;
+  /*El tamaño de la letra que tendrán los párrafos*/
+  font-size:14px;
+}
+
+/*Etiqueta que tendrá todo el formulario y el mensaje de caravelle*/
+section
+{
+  border:1px solid #BDBDBD;
+  /*Tendrá un margin top de 2px, un margin right y left de 8px y 4 de bottom*/
+  margin:2px 8px 4px;
+}
+
+/*Canviaremos el fondo de los inputs y selects a gris, excepto el de Concesión que
+tendrá un gris más oscuro.
+
+También con margin-top vamos a quitar 4px des de abajo para que esten más pegados
+a los titulos de los valores*/
+
+input, select
+{
+  background-color:#E6E6E6;
+  border:1px solid #A4A4A4;
+  margin-top:-4px;
+}
+
+/*Clase para el logotipo de Volkswagen*/
+.header__logo
+{
+  width:66px;
+  padding: 14px 0px 0px 9px;
+}
+/*Clase para el banner del modelo Multivan*/
+.header__banner
+{
+  width:100%;
+}
+
+/*Pondremos una distáncia del banner y la caja de padding left y right (8px)*/
+.header__banner
+{
+  padding:0px 8px 0px 8px;
+}
+
+/*Tanto la descripción del nuevo modelo Caravelle como su párrafo
+querremos que tenga una distáncia con su contenedor de 19 px (padding-left)*/
+.caravelle__descripcion, .caravelle__parrafo
+{
+  padding:0px 0px 0px 19px;
+}
+/*Quitaremos 13px des de abajo (margin-bottom) para que el párrafo de caravelle
+quede cerca de su descripción*
+
+Con line-height juntamos los palabras*/
+.caravelle__parrafo
+{
+  margin-top:-13px;
+  line-height: 20px;
+}
+
+/*Clase del contenedor del formulario*/
+.section__formulario
+{
+  /*Borde de la caja*/
+  border-top:1px solid #BDBDBD;
+  /*Ponemos el fondo en el div*/
+  background-image:url("fotoFormulario.png");
+  /*Ponemos que el fondo no se repita*/
+  background-repeat:no-repeat;
+  /*Estará posicionado en el centro del div*/
+  background-position: center center;
+  /*Ocupará todo el div*/
+  background-size:cover;
+}
+
+/*Al hijo formulario del contenedor le ponemos un padding-left de 26px para todo el contenido que tendrá*/
+.section__formulario > form
+{
+  padding:0px 0px 0px 26px;
+}
+
+.section__formulario__titulo
+{
+  /*Ponemos 15 px en cada titulo*/
+  font-size:15px;
+  margin-bottom:2px;
+}
+/*Clase que tendrá la estructura de los botones, tanto de la página HTML como PHP*/
+.formulario__boton
+{
+  border: 1px solid #a4c7cf;
+  /*El contenido de la caja tendra:
+     padding-top de 7px
+     padding-right y left de 9px
+     padding-bottom 5px*/
+  padding:7px 9px 5px;
+}
+
+/*Los botones del formulario tendran por defecto la clase colorInicial,
+que tendrá una letra de color azul,
+También queremos la misma propiedad para los titulos*/
+.colorInicial, .section__formulario__titulo
+{
+  color:#5882f4;
+}
+/*Color azulado por solamente el boton*/
+.colorInicial
+{
+  background-color:#E7F4F7;
+}
+/*La clase que será aplicada por medio de JS*/
+.colorCanviado
+{
+  background-color: #5882f4;
+  color:white;
+}
+
+/*Definimos el margin des de abajo para las claves de los datos*/
+.section__formulario__datos
+{
+  margin-bottom:8px;
+}
+
+/*Anchura para el desplegable de Modelo principal y Trato*/
+.section__formulario__desplegable
+{
+  width:120px;
+}
+/*Tendrá el objetivo de poner nuestras cajas en linia*/
+.section__formulario__inline
+{
+  /*Propiedad Flexible*/
+  display:flex;
+  /*Las cajas se ajustaran al espacio que disponga el navegador*/
+  flex-wrap: wrap;
+}
+/*Todos los hijos contenedores tendran un margin*/
+.section__formulario__inline > div
+{
+  margin-right: 13px;
+}
+/*El ancho que tendrá el input de tipo email*/
+.formulario__inline__email
+{
+  width:304px;
+}
+/*Clase para el desplegable de Concesión*/
+.formulario__inline__concesion
+{
+  /*Fondo de gris oscuro*/
+  background-color:#A4A4A4;
+  /*Ancho*/
+  width:100%;
+}
+/*Contenedor donde se encontrarán el elemento checkbox y el boton*/
+.section__formulario__condiciones
+{
+  /*Se ubicará todo el contenido del div hacia la derecha*/
+  text-align:right;
+  margin:3% 4% 1% 0px;
+}
+
+/*Contenedor donde se encontrará el mensaje del servidor como el botón de regreso*/
+.resultadosBD
+{
+  /*Se ubicara todo el contenido de dicho contenedor al medio*/
+  text-align: center;
+}
+/*El hijo h3 del contenedor anterior tendrá un padding-top de 5px y padding-bottom de 16px
+respecto al boton*/
+
+.resultadosBD > h3
+{
+  padding:5px 0px 16px;
+}

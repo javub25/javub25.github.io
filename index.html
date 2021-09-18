@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vehiculos comerciales</title>
+      <meta charset="UTF-8"/>
+      <!--Linea Responsive-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <!--Los enlaces de Fonts google son para el tipo de letra-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="normalize.css"/>
+      <link rel="stylesheet" href="estilos.css"/>
+    </head>
+
+    <body>
+      <!--Parte Header-->
+      <header>
+          <div>
+            <img class="header__logo" src="logo-vw-comerciales.jpg" alt="Logo VW"/>
+          </div>
+
+          <div>
+            <img class="header__banner" src="header_multivan.jpg" alt="Coche Volkswagen"/>
+          </div>
+      </header>
+
+      <!--Parte Section-->
+
+      <section>
+        <div class="section__caravelle">
+            <h2 class="caravelle__descripcion">Pruébalo y familiarízate con el Nuevo Caravelle</h2>
+            <p class="caravelle__parrafo">
+              Selecciona el modelo que quieras probar, según su disponibilidad, o solicita
+              información sobre el modelo que más te interese,
+              y podrás vivir una experiencia única al volante.
+              Déjanos tus datos y te responderemos lo antes posible.
+            </p>
+        </div>
+        <div class="section__formulario">
+
+          <!--Por defecto el formulario no enviara los datos hasta que sean validados por JavaScript-->
+          <form id="Formulario" action=" " method="post">
+
+              <h3 class="section__formulario__titulo">¿QUÉ MODELO QUIERES PROBAR?</h3>
+              <p class="section__formulario__datos">Modelo principal*</p>
+
+              <!--modeloPrincipal será la clave donde JavaScript y PHP cojeran el valor actual del desplegable +-->
+              <select class="section__formulario__desplegable" name="modeloPrincipal">
+                <option value="Selecciona">Selecciona</option>
+                <option value="Multivan">Multivan</option>
+                <option value="Caravelle">Caravelle</option>
+              </select>
+
+              <h3 class="section__formulario__titulo">¿TUS DATOS DE CONTACTO SON?</h3>
+              <p class="section__formulario__datos">Trato*</p>
+
+              <!--Trato será la clave donde JavaScript y PHP cojeran el valor actual del desplegable +-->
+
+              <select class="section__formulario__desplegable" name="Trato">
+                <option value="Selecciona">Selecciona</option>
+                <option value="SR">SR</option>
+                <option value="SRA">SRA</option>
+              </select>
+
+              <div class="section__formulario__inline">
+                <div>
+                    <p class="section__formulario__datos">Nombre*</p>
+                    <!--Nombre será la clave donde JavaScript y PHP cojeran el valor actual del input-->
+
+                    <input name="Nombre" type="text" placeholder="Min 3 y Máx 20 letras"></input>
+                </div>
+
+                <div>
+                  <p class="section__formulario__datos">1er apellido*</p>
+                  <!--1erApellido será la clave donde JavaScript y PHP cojeran el valor actual del input-->
+
+                  <input name="1erApellido" type="text" placeholder="Min 3 y Máx 30 letras"></input>
+                </div>
+
+                <div>
+                  <p class="section__formulario__datos">2n apellido*</p>
+                  <!--2nApellido será la clave donde JavaScript y PHP cojeran el valor actual del input-->
+                  <input name="2nApellido" type="text" placeholder="Min 3 y Máx 30 letras"></input>
+                </div>
+              </div>
+
+              <div class="section__formulario__inline">
+                <div>
+                  <p class="section__formulario__datos">E-mail*</p>
+                  <!--Email será la clave donde JavaScript y PHP cojeran el valor actual del input-->
+                  <input name="Email" class="formulario__inline__email" type="email" placeholder="40 caracteres máximos"></input>
+                </div>
+
+                <div>
+                  <p class="section__formulario__datos">Móvil*</p>
+                  <!--eL Movil será de tipo texto, ya que aceptaré el simbolo +-->
+                  <input name="Movil" type="text" placeholder="+34000000000"></input>
+                </div>
+              </div>
+
+              <h3 class="section__formulario__titulo">ESCOGE TU CONCESIONARIO</h3>
+
+              <div class="section__formulario__inline">
+                <div>
+                  <p class="section__formulario__datos">Provincia*</p>
+
+                  <select id="provincia" name="Provincia">
+                    <option value="Selecciona">Selecciona</option>
+                    <option value="Alava">ALAVA</option>
+                    <option value="Lleida">LLEIDA</option>
+                    <option value="Madrid">MADRID</option>
+                    <option value="Valencia">VALENCIA</option>
+                  </select>
+                </div>
+
+                <div>
+                  <p class="section__formulario__datos">Concesión*</p>
+
+                  <select id="selectorConcesiones" name="Concesion" class="formulario__inline__concesion">
+                      <option value="Selecciona">Selecciona</option>
+                      <option value="CIARSA (Alto de Armentia, 4 - Vitoria)">CIARSA (Alto de Armentia, 4 - Vitoria)</option>
+                      <option value="AUTODALSER DALMAU, S.L. (P.I. El Segre c/. Josep Baró i Travé, 117 bis - Lleida)">AUTODALSER DALMAU, S.L. (P.I. El Segre c/. Josep Baró i Travé, 117 bis - Lleida)</option>
+                      <option value="SERVISIMÓ, S.L. (Avda. Barcelona, 19 - Tárrega)">SERVISIMÓ, S.L. (Avda. Barcelona, 19 - Tárrega)</option>
+                      <option value="SERVISIMÓ, S.L. (Avda. Europa, Polígono Industrial Goltparc - Golmes Mollerusa)">SERVISIMÓ, S.L. (Avda. Europa, Polígono Industrial Goltparc - Golmes Mollerusa)</option>
+                      <option value="ARDASA 2.000, S.A. (Avda. Carlos Sainz, 39-41 - Leganés)">ARDASA 2.000, S.A. (Avda. Carlos Sainz, 39-41 - Leganés)</option>
+                      <option value="ARDASA 2.000, S.A. (C/ Almendro, nº 8 - Fuenlabrada)">ARDASA 2.000, S.A. (C/ Almendro, nº 8 - Fuenlabrada)</option>
+                      <option value="COMATRA VEHIC. COMERCIALES, S.L. (C. Eratostenes, 4, Polígono Industrial El Lomo -Getafe)">COMATRA VEHIC. COMERCIALES, S.L. (C. Eratostenes, 4, Polígono Industrial El Lomo -Getafe)</option>
+                      <option value="SF. TOME, S.A.. (C. Tauro, 27 - Madrid)">SF. TOME, S.A.. (C. Tauro, 27 - Madrid)</option>
+                      <option value="MOTOR GÓMEZ VILLALBA, S.A. (Av. Juan Carlos I, 24 - Collado Villalba)">MOTOR GÓMEZ VILLALBA, S.A. (Av. Juan Carlos I, 24 - Collado Villalba)</option>
+                      <option value="SEALCO MOTOR, S.A.. (Ctra. S. M.Valdeiglesias, n.32 - Alcorcón)">SEALCO MOTOR, S.A.. (Ctra. S. M.Valdeiglesias, n.32 - Alcorcón)</option>
+                      <option value="VOLKSWAGEN MADRID, S.A. (C/ De Sofía, 18 - Madrid)">VOLKSWAGEN MADRID, S.A. (C/ De Sofía, 18 - Madrid)</option>
+                      <option value="LEVANTE WAGEN, S.A. (Avda. Cid, 152 - Valencia)">LEVANTE WAGEN, S.A. (Avda. Cid, 152 - Valencia)</option>
+                      <option value="TALLERS XÀTIVA, S.A. (C. Llosa de Ranes, 5 Polig. C, s/n - Xàtiva)">TALLERS XÀTIVA, S.A. (C. Llosa de Ranes, 5 Polig. C, s/n - Xàtiva)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="section__formulario__condiciones">
+                  <input name="Confirmacion" type="checkbox">&nbsp;He leído y acepto la Política de Privacidad&nbsp;&nbsp;</input>
+                  <button id="boton" class="formulario__boton colorInicial">Enviar</button>
+              </div>
+            </div>
+          </form>
+      </section>
+
+      <!--Llamo los scripts de JavaScript-->
+      <script type="text/javascript" src="cambiarBoton.js"></script>
+      <script type="text/javascript" src="validarFormulario.js"></script>
+    </body>
+  </html>
